@@ -6,9 +6,8 @@
             padding: 0;
         }
         #top-div {
-            border: 1px solid;
-            border-color: rgb(0, 0, 0);
-            background-color: rgb(192, 192, 183);
+            box-shadow: 0px 1px 5px gray;
+            background-color: rgb(247, 247, 247);
             position: relative;
             display: flex;
             font-size: larger;
@@ -16,11 +15,34 @@
             padding-bottom: 3%;
             width: 100%;
         }
+        #header {
+            border-right: solid;
+            padding-right: 10px;
+        }
+        #portfolio {
+            border-right: solid;
+            padding-right: 7px;
+            padding-left: 7px;
+        }
+        #writings {
+            border-right: solid;
+            padding-right: 7px;
+            padding-left: 7px;
+        }
+        #travel-map {
+            border-right: solid;
+            padding-right: 7px;
+            padding-left: 7px;
+        }
+        #sundries {
+            padding-right: 7px;
+            padding-left: 7px;
+        }
         #middle-div {
             background-color: rgb(255, 255, 255);
             padding-bottom: 50%;
             padding-left: 25%;
-            padding-top: 1%;
+            padding-top: 2%;
             display: flex;
             overflow: auto;
             font-size: 130%;
@@ -35,7 +57,13 @@
     <title>Rosaline's Garden</title>
 </head>
 <body>
-    <div id="top-div">Rosaline's Garden</div>
+    <div id="top-div">
+        <div id="header">Rosaline's Garden</div>
+        <div id="portfolio">Portfolio</div>
+        <div id="writings">Writings</div>
+        <div id="travel-map">Travel Map</div>
+        <div id="sundries">Sundries</div>
+    </div>
     <div id="middle-div">Middle Div Div Divv Div Div DIV DIV DIv dividvidvidvidvidviivdvidividivvidviividvidiviivivasdasdsadasdadaidivdividv</div>
     <div id="footer-div">Footer Div</div>
 </body>
