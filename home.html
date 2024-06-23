@@ -12,7 +12,7 @@
             display: flex;
             padding: 1%;
             padding-bottom: 3%;
-            width: 100%;
+            width: 99%;
         }
         #header {
             border-right: solid;
@@ -53,26 +53,40 @@
             font-size: larger;
         }
         #middle-div {
-            padding-bottom: 50%;
             display: flex;
             overflow: auto;
             font-size: 130%;
         }
         #left-middle-div {
-            width: 20%;
-            background-color: rgb(121, 109, 109);
+            width: 15%;
+            background-color: rgb(204, 189, 212);
+            padding-bottom: 35%;
         }
         #content-div {
-            box-shadow: 0px 1px 5px gray;
-            width: 60%;
+            box-shadow: 0px 1px 6px rgb(113, 109, 109);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 70%;
             height: 100%;
+            padding-bottom: 35%;
+            padding-top: 1%;
+            padding-left: 1%;
+            padding-right: 1%;
+            z-index: 1;
         }
         #right-middle-div {
-
+            width: 15%;
+            background-color: rgb(204, 189, 212);
+            padding-bottom: 35%;
         }
-        #footer-div {
+        #footer-div-top {
+            background-color: rgb(247, 247, 247);
+            padding-top: 1%;
+            height: 50%;
+        }
+        #footer-div-bottom {
             background-color: rgb(156, 83, 224);
-            padding-top: 2%;
+            padding-top: 3%;
+            height: 50%;
         }
     </style>
 <head>
@@ -97,7 +111,10 @@
         <div id="content-div">Hello! My name is Rosaline Flowers, and this is my website. It is so cool and awesome and you should really click around and see what you like.</div>
         <div id="right-middle-div"></div>
     </div>
-    <div id="footer-div">Footer Div</div>
+    <div id="footer-div">
+        <div id="footer-div-top"></div>
+        <div id="footer-div-bottom"></div>
+    </div>
 </body>
 
 </html>
