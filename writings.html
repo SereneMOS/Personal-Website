@@ -73,6 +73,17 @@
             padding-right: 1%;
             z-index: 1;
         }
+        #writing-content {
+            border: solid rgb(234, 234, 234);
+            width: 90%;
+            height: 500px;
+            padding: 1%;
+        }
+        #sample1 {
+            background-color: rgb(184, 184, 184);
+            width: 25%;
+            height: 300px;
+        }
         #right-middle-div {
             width: 10%;
             background-color: rgb(204, 189, 212);
@@ -109,7 +120,19 @@
     <div id="middle-div">
         <div id="left-middle-div"></div>
         <div id="content-div">
-            <div id="filter-div"></div>
+            <div id="filter-div">
+                <label for="writing-filter">Filter Results</label>
+                <select name="writing-filter">
+                    <option>Select</option>
+                    <option value="blog">Blog</option>
+                    <option value="word-of-the-whatever"> Word of the Whatever</option>
+                    <option value="poem">Poem</option>
+                    <option value="short-story">Short Story</option>
+                </select>
+            </div>
+            <div id="writing-content">
+                <div id="sample1"></div>
+            </div>
         </div>
         <div id="right-middle-div"></div>
     </div>
@@ -117,6 +140,9 @@
         <div id="footer-div-top"></div>
         <div id="footer-div-bottom"></div>
     </div>
+    <script>
+
+    </script>
 </body>
 
 </html>
