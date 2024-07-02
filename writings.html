@@ -11,7 +11,7 @@
             position: relative;
             display: flex;
             padding: 1%;
-            padding-bottom: 3%;
+            padding-bottom: 2%;
             width: 99%;
         }
         #header {
@@ -19,7 +19,8 @@
             border-color: gray;
             padding-right: 16px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: 25px;
+            font-size: 30px;
+            padding-left: 1%;
         }
         #portfolio {
             border-right: solid;
@@ -73,9 +74,12 @@
         #writing-content {
             border: solid rgb(234, 234, 234);
             width: 90%;
-            height: 500px;
+            height: 100%;
             padding: 1%;
             display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            overflow: auto;
         }
         #sample1 {
             background-color: rgb(243, 239, 244);
@@ -84,6 +88,7 @@
             font-size: 15px;
             padding: 1%;
             margin-right: 5%;
+            margin-top: 1%;
         }
         #right-middle-div {
             width: 10%;
@@ -132,11 +137,19 @@
                 </select>
             </div>
             <div id="writing-content">
-                <div id="sample1">The Fart</div>
-                <div id="sample1">The Poo</div>
-                <div id="sample1">The Shid</div>
-                <div id="sample1">The Great</div>
-                <div id="sample1">The What</div>
+                <div id="sample1">
+                    <label>Poem 1</label>
+                    <label>7/2/2024</label>
+                    <label>Poem</label>
+                </div>
+                <div id="sample1">Poem 2</div>
+                <div id="sample1">Short Story 1</div>
+                <div id="sample1">Word of the Whatever 1</div>
+                <div id="sample1">Poem 3</div>
+                <div id="sample1">Blog 2</div>
+                <div id="sample1">Blog 3</div>
+                <div id="sample1">Word of the Whatever 2</div>
+
             </div>
         </div>
         <div id="right-middle-div"></div>
