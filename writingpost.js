@@ -9,6 +9,22 @@ class writingPost extends HTMLElement {
         this.content = content
     }
     
+
+}
+
+const writing = document.querySelector(".writing")
+var selected = 0;
+
+function select() {
+    if (selected == 0) {
+        selected = 1
+        writing.style.width = "100%";
+        writing.style.height = "500px";
+    } else {
+        selected = 0;
+        writing.style.width = "25%";
+        writing.style.height = "250px";
+    }
 }
 
 customElements.define("writing-post", writingPost)
