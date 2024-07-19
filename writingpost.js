@@ -12,18 +12,14 @@ class writingPost extends HTMLElement {
 
 }
 
-const writing = document.querySelector(".writing")
-var selected = 0;
-
-function select() {
-    if (selected == 0) {
-        selected = 1
-        writing.style.width = "100%";
-        writing.style.height = "500px";
+function select(id) {
+    const post = document.querySelector(id)
+    if (post.style.width == "25%") {
+        post.style.width = "100%";
+        post.style.height = "500px";
     } else {
-        selected = 0;
-        writing.style.width = "25%";
-        writing.style.height = "250px";
+        post.style.width = "25%";
+        post.style.height = "250px";
     }
 }
 
