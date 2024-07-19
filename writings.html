@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
         body {
             margin: 0;
             padding: 0;
@@ -9,14 +10,24 @@
             text-decoration: none;
         }
         .post {
-            background-color: rgb(243, 239, 244);
+            background-color: rgb(247, 246, 248);
             width: 25%;
             height: 250px;
-            font-size: 15px;
+            font-size: 20px;
             padding: 1%;
             margin-right: 5%;
             margin-top: 1%;
             overflow-y: scroll;
+        }
+        .namendate { 
+            padding-bottom: 2%; 
+            font-size: 20px; 
+        }
+        .type {
+            margin-bottom: 3%; 
+            padding-bottom: 2%; 
+            border-bottom: solid 1px; 
+            font-size: 25px;
         }
         #top-div {
             box-shadow: 0px 1px 5px gray;
@@ -57,7 +68,7 @@
         }
         #content-div {
             box-shadow: 0px 1px 6px rgb(113, 109, 109);
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family: "Josefin Sans", sans-serif;
             width: 80%;
             height: 100%;
             padding: 1%;
@@ -92,6 +103,9 @@
         }
     </style>
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <title>Rosaline's Garden - Writings</title>
 </head>
 <body>
@@ -130,18 +144,41 @@
             </div>
             <div id="writing-content">
                 <div class="post" id="sample1" onclick="select('#sample1')">
-                    <div style="padding-bottom: 2%; font-size: large;">Poem 1</div>
-                    <div style="padding-bottom: 2%; font-size: large;">7/2/2024</div>
-                    <div style="margin-bottom: 3%; padding-bottom: 2%; border-bottom: solid 1px; font-size: larger;">Poem</div>
-                    <div>aosidjnfhsdfi oaohdoiasvnkcs modjfnvskpfnbvsmn sdkf nkadojins difokp ksjdnfjnsndfio sdifjnsjuni</div>
+                    <div class="namendate">Sandwich</div>
+                    <div class="namendate">7/2/2024</div>
+                    <div class="type">Poem</div>
+                    <div>
+                        aosidjnfhsdfi oaohdoiasvnkcs modjfnvskpfnbvsmn sdkf 
+                        nkadojins difokp ksjdnfjnsndfio sdifjnsjuni lkmsdfls
+                        lfmlkefw owmfowm owfwpwpe fmpe pfmweomwoe o mfofwe 
+                        wed erfpmwpoiemfw
+                    </div>
                 </div>
                 <div class="post" id="sample2" onclick="select('#sample2')">
-                    <div>Poem 2</div>
-                    <div>7/3/2024</div>
-                    <div>Poem</div>
+                    <div class="namendate">Poem 2</div>
+                    <div class="namendate">7/3/2024</div>
+                    <div class="type">Poem</div>
+                    <div>
+                        aosidjnfhsdfi oaohdoiasvnkcs modjfnvskpfnbvsmn sdkf 
+                        nkadojins difokp ksjdnfjnsndfio sdifjnsjuni
+                    </div>
                 </div>
-                <div class="post" id="sample3" onclick="select('#sample3')">Short Story 1</div>
-                <div class="post" id="sample4">Word of the Whatever 1</div>
+                <div class="post" id="sample3" onclick="select('#sample3')">
+                    <div class="namendate">Charcot-Wilbrand</div>    
+                    <div class="namendate">7/3/2024</div>
+                    <div class="type">Short Story</div>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="post" id="sample4" onclick="select('#sample4')">
+                    <div class="namendate">Appraise</div>
+                    <div class="namendate">7/19/2024</div>
+                    <div class="type">Word of the Whatever</div>
+                    <div>
+
+                    </div>
+                </div>
                 <div class="post" id="sample5">Poem 3</div>
                 <div class="post" id="sample6">Blog 2</div>
                 <div class="post" id="sample7">Blog 3</div>
