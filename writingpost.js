@@ -21,14 +21,14 @@ function select(id) {
     }
 }
 
-function filter(type) {
-    var i, x;
+function filter() {
+    var i, x, y;
     x = document.getElementsByClassName("post");
-
+    y = document.getElementById("writing-filter").value;
     for (i = 0; i < x.length; i++) {
         var m = x[i];
         var p = m.className.split(" ");
-        if (p[1] == type) {
+        if (p[1] == y) {
             m.style.display = "initial";
         } else {
             m.style.display = "none";

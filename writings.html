@@ -139,14 +139,14 @@
         <div id="content-div">
             <div id="filter-div">
                 <label for="writing-filter">Filter Results</label>
-                <select name="writing-filter">
+                <select name="writing-filter" id="writing-filter">
                     <option>-- Select --</option>
-                    <option value="blog" onclick="filter('blog')">Blog</option>
-                    <option value="word-of-the-whatever" onclick="filter('word')"> Word of the Whatever</option>
-                    <option value="poem" onclick="filter('poem')">Poem</option>
-                    <option value="short-story" onclick="filter('story')">Short Story</option>
+                    <option value="blog">Blog</option>
+                    <option value="word"> Word of the Whatever</option>
+                    <option value="poem">Poem</option>
+                    <option value="story">Short Story</option>
                 </select>
-                <button onclick="filter('blog')" style="width: 100px;">doodoo</button>
+                <button onclick="filter()" style="width: 65px; font-family: Josefin Sans; background-color: white;">Apply</button>
             </div>
             <div id="writing-content">
                 <div class="post blog" id="wpost1" onclick="select('#wpost1')">
