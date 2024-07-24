@@ -141,14 +141,15 @@
                 <label for="writing-filter">Filter Results</label>
                 <select name="writing-filter">
                     <option>-- Select --</option>
-                    <option value="blog">Blog</option>
-                    <option value="word-of-the-whatever"> Word of the Whatever</option>
-                    <option value="poem">Poem</option>
-                    <option value="short-story">Short Story</option>
+                    <option value="blog" onclick="filter('blog')">Blog</option>
+                    <option value="word-of-the-whatever" onclick="filter('word')"> Word of the Whatever</option>
+                    <option value="poem" onclick="filter('poem')">Poem</option>
+                    <option value="short-story" onclick="filter('story')">Short Story</option>
                 </select>
+                <button onclick="filter('blog')" style="width: 100px;">doodoo</button>
             </div>
             <div id="writing-content">
-                <div class="post" id="wpost1" onclick="select('#wpost1')">
+                <div class="post blog" id="wpost1" onclick="select('#wpost1')">
                     <div class="namendate">First Blog!</div>
                     <div class="namendate">7/2/2024</div>
                     <div class="type">Blog</div>
@@ -159,7 +160,7 @@
                         wed erfpmwpoiemfw
                     </div>
                 </div>
-                <div class="post" id="wpost2" onclick="select('#wpost2')">
+                <div class="post poem" id="wpost2" onclick="select('#wpost2')">
                     <div class="namendate">Poem 2</div>
                     <div class="namendate">7/3/2024</div>
                     <div class="type">Poem</div>
@@ -168,7 +169,7 @@
                         nkadojins difokp ksjdnfjnsndfio sdifjnsjuni
                     </div>
                 </div>
-                <div class="post" id="wpost3" onclick="select('#wpost3')">
+                <div class="post story" id="wpost3" onclick="select('#wpost3')">
                     <div class="namendate">Charcot-Wilbrand</div>    
                     <div class="namendate">7/3/2024</div>
                     <div class="type">Short Story</div>
@@ -176,7 +177,7 @@
 
                     </div>
                 </div>
-                <div class="post" id="wpost4" onclick="select('#wpost4')">
+                <div class="post word" id="wpost4" onclick="select('#wpost4')">
                     <div class="namendate">Appraise</div>
                     <div class="namendate">7/19/2024</div>
                     <div class="type">Word of the Whatever</div>
@@ -184,7 +185,7 @@
 
                     </div>
                 </div>
-                <div class="post" id="wpost5" onclick="select('#wpost5')">
+                <div class="post word" id="wpost5" onclick="select('#wpost5')">
                     <div class="namendate">Viscera</div>
                     <div class="namendate">7/20/2024</div>
                     <div class="type">Word of the Whatever</div>
@@ -192,7 +193,7 @@
 
                     </div>
                 </div>
-                <div class="post" id="wpost6" onclick="select('#wpost6')">
+                <div class="post word" id="wpost6" onclick="select('#wpost6')">
                     <div class="namendate">Deign</div>
                     <div class="namendate">7/19/2024</div>
                     <div class="type">Word of the Whatever</div>
@@ -200,7 +201,7 @@
 
                     </div>
                 </div>
-                <div class="post" id="wpost7" onclick="select('#wpost7')">
+                <div class="post poem" id="wpost7" onclick="select('#wpost7')">
                     <div class="namendate">Sandwich</div>
                     <div class="namendate">7/21/2024</div>
                     <div class="type">Poem</div>
@@ -211,7 +212,7 @@
                         wed erfpmwpoiemfw
                     </div>
                 </div>
-                <div class="post" id="wpost8" onclick="select('#wpost8')">
+                <div class="post blog" id="wpost8" onclick="select('#wpost8')">
                     <div class="namendate">Game Development and Weight Gain Journey</div>
                     <div class="namendate">7/22/2024</div>
                     <div class="type">Blog</div>
