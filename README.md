@@ -1,9 +1,7 @@
 # Personal-Website
 
-Dev Tasks:
-Add script to writing filter
-Create text and image integrations for home page
-Sundries dropdown
-Make template for posts on writing
-Create some posts on writing
-Import some better fonts
+Development Tasks:
+Create and import icon image
+Create and import header image
+Fix writing filter bug
+Implement Travel Map, Montroigan Lessons, and Travel Map
