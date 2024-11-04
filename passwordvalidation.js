@@ -5,10 +5,11 @@ class passwordValidation extends HTMLElement {
     }
 }
 
-function validate(attempt, id) {
-    const element = document.querySelector(id)
-    if (attempt == password) {
-        
+function validate() {
+    const attempt = document.getElementById('password');
+    const correctPassword = 'hi';
+    if (attempt.value == correctPassword) {
+        attempt.style.width = "10%";
     }
 }
 customElements.define("password-validation", passwordValidation)
