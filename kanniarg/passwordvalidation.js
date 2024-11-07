@@ -9,7 +9,8 @@ function validate() {
     const attempt = document.getElementById('password');
     const correctPassword = 'hi';
     if (attempt.value == correctPassword) {
-        attempt.style.width = "10%";
+        const fart = document.getElementById('veil');
+        fart.style.contentVisibility = "visible";
     }
 }
 customElements.define("password-validation", passwordValidation)
