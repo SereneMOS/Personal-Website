@@ -7,7 +7,7 @@ class passwordValidation extends HTMLElement {
 
 function validate1() {
     const attempt = document.getElementById('password');
-    const correctPassword = 'hi';
+    const correctPassword = 'dopa';
     if (attempt.value == correctPassword) {
         const content = document.getElementById('veil');
         content.style.contentVisibility = "visible";
