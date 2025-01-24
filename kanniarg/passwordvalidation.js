@@ -17,7 +17,7 @@ function validate1() {
 }
 function validate2() {
     const attempt = document.getElementById('password');
-    const correctPassword = 'what#the#freak';
+    const correctPassword = 'dab#the#freak';
     if (attempt.value == correctPassword) {
         const content = document.getElementById('veil');
         content.style.contentVisibility = "visible";
