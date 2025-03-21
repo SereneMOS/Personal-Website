@@ -11,6 +11,40 @@ a:link {
 a:hover{
     color: rgb(197, 139, 255)
 }
+.content {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    display: flex;
+    border-bottom: solid purple;
+    margin-bottom: 4%;
+}
+#content1 {
+    animation-delay: 0.25s;
+}
+#content2 {
+    animation-delay: 0.75s;
+}
+#content3 {
+    animation-delay: 1s;
+}
+#content4 {
+    animation-delay: 1.25s;
+}
+#content5 {
+    animation-delay: 1.5s;
+}
+#content6 {
+    animation-delay: 1.75s;
+}
+#content7 {
+    animation-delay: 2s;
+    border-bottom: none;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
 body {
     margin: 0;
     padding: 0;
