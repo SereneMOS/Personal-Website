@@ -11,6 +11,13 @@ a:link {
 a:hover{
     color: rgb(197, 139, 255)
 }
+.post:hover {
+    border: solid;
+    border-color: black;
+}
+#links:hover {
+    font-size: x-large;
+}
 body {
     margin: 0;
     padding: 0;
@@ -37,6 +44,7 @@ span {
     margin-top: 1%;
     overflow-y: hidden;
     overflow-x: hidden;
+    transition: border-create 0.5s;
 }
 .typendate { 
     padding-bottom: 2%; 
@@ -54,7 +62,7 @@ span {
     position: relative;
     display: flex;
     padding: 1%;
-    padding-bottom: 1%;
+    padding-bottom: 0.5%;
     width: 98%;
 }
 #header {
@@ -64,12 +72,13 @@ span {
     margin-left: 8%;
 }
 #links {
-    padding-right: 0.75%;
+    padding-right: 1.5%;
     padding-left: 0.5%;
     padding-top: 0.5%;
     height: 40px;
     font-family: "Gothic A1", sans-serif;
     font-size: larger;
+    transition: font-size 0.5s;
 }
 #middle-div {
     display: flex;
