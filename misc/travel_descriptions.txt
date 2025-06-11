@@ -1,0 +1,53 @@
+#Arizona
+
+#Arkansas
+
+#California
+
+#Colorado
+
+#Florida
+
+#Georgia
+
+#Idaho
+
+#Illinois
+
+#Indiana
+
+#Kansas
+
+#Kentucky
+
+#Maryland
+
+#Massachusets
+
+#Missouri
+
+#Nevada
+
+#New Jersey
+
+#New Mexico
+
+#New York
+
+#Ohio
+
+#Oregon
+
+#Pennsylvania
+
+#South Carolina
+
+#Tennessee
+
+#Texas
+
+#Virginia
+
+#West Virginia
+
+#Wyoming
