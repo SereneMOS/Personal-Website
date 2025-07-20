@@ -1,28 +1,36 @@
 const express = require('express');
-const path = require('path');
 const MongoClient = require('mongodb').MongoClient;
+const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 8080;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://rosalineaflow:kRfaWkzT6WCoZKNR@cluster0.pyyak8a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+app.use(cors());
 
-app.use(express.static(path.join(__dirname, '../../')));
+// MongoDB Atlas connection
+const MONGODB_URI = process.env.MONGODB_URI;
+let db;
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../travelmap.html'));
-});
-
-app.get('/states_data/:state', async (req, res) => {
-  const state = parseInt(req.params.state);
-  const textline = await db.collection('states_data').findOne({ state });
-  res.send(textline || { error: "Line not found" });
-});
-
-// Database Connection
 MongoClient.connect(MONGODB_URI, { useUnifiedTopology: true })
   .then(client => {
-    console.log('Connected to MongoDB');
-    db = client.db();
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    db = client.db('states'); // Connect to 'states' database
+    console.log('Connected to MongoDB Atlas');
   })
-  .catch(err => console.error('MongoDB connection error:', err));
+  .catch(err => console.error('Connection error:', err));
+
+// Get state description by ID
+app.get('/api/state/:id', async (req, res) => {
+  try {
+    const state = await db.collection('states_data')
+                         .findOne({ id: parseInt(req.params.id) });
+    
+    if (!state) {
+      return res.status(404).json({ error: 'State not found' });
+    }
+    res.json({ description: state.description });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
