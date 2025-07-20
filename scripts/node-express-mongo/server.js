@@ -12,9 +12,9 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../../travelmap.html'));
 });
 
-app.get('/textline/:lineNumber', async (req, res) => {
-  const lineNumber = parseInt(req.params.lineNumber);
-  const textline = await db.collection('textlines').findOne({ lineNumber });
+app.get('/states_data/:state', async (req, res) => {
+  const state = parseInt(req.params.state);
+  const textline = await db.collection('states_data').findOne({ state });
   res.send(textline || { error: "Line not found" });
 });
 

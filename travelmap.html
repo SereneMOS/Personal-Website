@@ -31,12 +31,10 @@
     <div id="middle-div">
         <div id="left-middle-div"></div>
         <div id="content-div">
-            <button type="button">Button 1</button>
-            <button type="button">Button 2</button> 
             <img src="assets/travelmap/Blank_map_of_the_United_States.png" alt="usmap" id="map" usemap="#usmap">
             <map name="usmap">
-                <area class="state" shape="circle" coords="152,300,20" onclick="fetchLine('1')" alt="Arizona" href="#">
-                <area class="state" shape="circle" coords="425,310,10" onclick="fetchLine('2')" alt="Arkansas" href="#">
+                <area class="state" shape="circle" coords="152,300,20" onclick="fetchLine('Arizona')" alt="Arizona" href="#">
+                <area class="state" shape="circle" coords="425,310,10" onclick="fetchLine('Arkansas')" alt="Arkansas" href="#">
                 <area class="state" shape="circle" coords="50,225,20" onclick="select('California')" alt="California" href="#">
                 <area class="state" shape="circle" coords="252,225,20" onclick="select('Colorado')" alt="Colorado" href="#">
                 <area class="state" shape="circle" coords="600,418,10" onclick="select('Florida')" alt="Florida" href="#">
@@ -98,14 +96,14 @@
         </div>
     </div>
     <script>
-        async function fetchLine(lineNumber) {
+        async function fetchLine(state) {
             try {
-                const response = await fetch(`/textlines/${lineNumber}`);
+                const response = await fetch(`/states_data/${state}`);
                 const data = await response.json();
-                document.getElementById('display').textContent = data.text || "Line not found";
+                document.getElementById('descriptions-div').textContent = data.text || "Line not found";
             } catch (err) {
                 console.error("Error:", err);
-                document.getElementById('display').textContent = "Failed to fetch line.";
+                document.getElementById('descriptions-div').textContent = "Failed to fetch line.";
             }
         }
     </script>
