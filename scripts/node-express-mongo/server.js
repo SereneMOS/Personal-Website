@@ -6,12 +6,10 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://rosalineaflow:kRfaWkzT6WCoZKNR@cluster0.pyyak8a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
-// Middleware
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../../')));
 
-// Routes
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, '../../travelmap.html'));
 });
 
 app.get('/textline/:lineNumber', async (req, res) => {
