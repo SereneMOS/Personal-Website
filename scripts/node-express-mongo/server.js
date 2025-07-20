@@ -20,7 +20,7 @@ MongoClient.connect(MONGODB_URI, { useUnifiedTopology: true })
 app.get('/api/state/:id', async (req, res) => {
   try {
     const state = await db.collection('states_data')
-                         .findOne({ id: parseInt(req.params.id) });
+      .findOne({ id: parseInt(req.params.id) });
     
     if (!state) {
       return res.status(404).json({ error: 'State not found' });
