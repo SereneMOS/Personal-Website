@@ -1,46 +1,115 @@
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" href="style/travelmap_style.css">
 <head>
-  <meta charset="utf-8">
-  <title>Text Line Fetcher</title>
-  <style>
-    button {
-      padding: 10px 15px;
-      margin: 5px;
-      background: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    #display {
-      margin-top: 20px;
-      padding: 15px;
-      border: 1px solid #ddd;
-      font-size: 1.2em;
-    }
-  </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>Rosaline's Garden - Travel Map</title>
 </head>
 <body>
-  <h1>Fetch a Line</h1>
-  <!-- Four buttons for lines 1-4 -->
-  <button onclick="fetchLine(1)">Line 1</button>
-  <button onclick="fetchLine(2)">Line 2</button>
-  <button onclick="fetchLine(3)">Line 3</button>
-  <button onclick="fetchLine(4)">Line 4</button>
-  <div id="display">Click a button to fetch a line.</div>
-
-  <script>
-    async function fetchLine(lineNumber) {
-      try {
-        const response = await fetch(`/textlines/${lineNumber}`);
-        const data = await response.json();
-        document.getElementById('display').textContent = data.text || "Line not found";
-      } catch (err) {
-        console.error("Error:", err);
-        document.getElementById('display').textContent = "Failed to fetch line.";
-      }
-    }
-  </script>
+    <div id="top-div">
+        <div id="header">
+            <a href="home.html">Rosaline's Garden</a>
+        </div>
+        <div id="links" style="margin-left: 5%;">
+            <a href="portfolio.html">Portfolio</a>
+        </div>
+        <div id="links">
+            <a href="writings.html">Writings</a>
+        </div>
+        <div id="links">
+            <a href="https://personal-website-wr0y.onrender.com">Travel Map</a>
+        </div>
+        <div id="links">
+            <a href="montroiganlessons.html">Montroigan Lessons</a>
+        </div>
+        <div id="links">
+            <a href="chess2.html">Chess 2</a>
+        </div>
+    </div>
+    <div id="middle-div">
+        <div id="left-middle-div"></div>
+        <div id="content-div">
+            <button type="button">Button 1</button>
+            <button type="button">Button 2</button> 
+            <img src="assets/travelmap/Blank_map_of_the_United_States.png" alt="usmap" id="map" usemap="#usmap">
+            <map name="usmap">
+                <area class="state" shape="circle" coords="152,300,20" onclick="fetchLine('1')" alt="Arizona" href="#">
+                <area class="state" shape="circle" coords="425,310,10" onclick="fetchLine('2')" alt="Arkansas" href="#">
+                <area class="state" shape="circle" coords="50,225,20" onclick="select('California')" alt="California" href="#">
+                <area class="state" shape="circle" coords="252,225,20" onclick="select('Colorado')" alt="Colorado" href="#">
+                <area class="state" shape="circle" coords="600,418,10" onclick="select('Florida')" alt="Florida" href="#">
+                <area class="state" shape="circle" coords="560,325,10" onclick="select('Georgia')" alt="Georgia" href="#">
+                <area class="state" shape="circle" coords="155,135,10" onclick="select('Idaho')" alt="Idaho" href="#">
+                <area class="state" shape="circle" coords="470,220,10" onclick="select('Illinois')" alt="Illinois" href="#">
+                <area class="state" shape="circle" coords="510,210,10" onclick="select('Indiana')" alt="Indiana" href="#">
+                <area class="state" shape="circle" coords="350,240,15" onclick="select('Kansas')" alt="Kansas" href="#">
+                <area class="state" shape="circle" coords="530,254,10" onclick="select('Kentucky')" alt="Kentucky" href="#">
+                <area class="state" shape="circle" coords="637,210,5" onclick="select('Maryland')" alt="Maryland" href="#">
+                <area class="state" shape="circle" coords="680,137,5" onclick="select('Massachusets')" alt="Massachusets" href="#">
+                <area class="state" shape="circle" coords="420,250,15" onclick="select('Missouri')" alt="Missouri" href="#">
+                <area class="state" shape="circle" coords="100,200,20" onclick="select('Nevada')" alt="Nevada" href="#">
+                <area class="state" shape="circle" coords="658,190,5" onclick="select('New Jersey')" alt="New Jersey" href="#">
+                <area class="state" shape="circle" coords="230,300,20" onclick="select('New Mexico')" alt="New Mexico" href="#">
+                <area class="state" shape="circle" coords="637,137,10" onclick="select('New York')" alt="New York" href="#">
+                <area class="state" shape="circle" coords="550,200,10" onclick="select('Ohio')" alt="Ohio" href="#">
+                <area class="state" shape="circle" coords="85,50,15" onclick="select('Oregon')" alt="Oregon" href="#">
+                <area class="state" shape="circle" coords="620,175,10" onclick="select('Pennsylvania')" alt="Pennsylvania" href="#">
+                <area class="state" shape="circle" coords="620,275,10" onclick="select('South Carolina')" alt="South Carolina" href="#">
+                <area class="state" shape="circle" coords="520,285,10" onclick="select('Tennessee')" alt="Tennessee" href="#">
+                <area class="state" shape="circle" coords="337,375,20" onclick="select('Texas')" alt="Texas" href="#">
+                <area class="state" shape="circle" coords="620,235,10" onclick="select('Virginia')" alt="Virginia" href="#">
+                <area class="state" shape="circle" coords="578,230,10" onclick="select('West Virginia')" alt="West Virginia" href="#">
+                <area class="state" shape="circle" coords="230,150,20" onclick="select('Wyoming')" alt="Wyoming" href="#">
+            </map>
+            <div id="descriptions-div">hello</div>
+        </div>
+        <div id="right-middle-div"></div>
+    </div>
+    <div id="footer-div">
+        <div id="footer-div-top"></div>
+        <div id="footer-div-bottom">
+            <a href="https://www.tumblr.com/bubble-rosaline">
+                <button style="width: 15%; padding: 0%; background-color: black;">
+                    <img src="assets/tumblr.jpg" style="width: 50%;">
+                </button>
+            </a>
+            <a href="https://www.linkedin.com/in/rosaline-flowers-32616123a/">
+                <button style="width: 15%; padding: 0%; background-color: black;">
+                    <img src="assets/linkedin.jpg" style="width: 50%;">
+                </button>
+            </a>
+            <a href="https://github.com/SereneMOS">
+                <button style="width: 15%; padding: 0%; background-color: black;">
+                    <img src="assets/github.jpg" style="width: 50%;">
+                </button>
+            </a>
+            <a href="https://www.instagram.com/bubble_rosaline_?igsh=cHUzdm1peDZrNzcy&utm_source=qr">
+                <button style="width: 15%; padding: 0%; background-color: black;">
+                    <img src="assets/insta.png" style="width: 50%;">
+                </button>
+            </a>
+            <a href="mailto:rosalineaflow@gmail.com">
+                <button style="width: 15%; padding: 0%; background-color: black;">
+                    <img src="assets/email.png" style="width: 60%;">
+                </button>
+            </a>
+        </div>
+    </div>
+    <script>
+        async function fetchLine(lineNumber) {
+            try {
+                const response = await fetch(`/textlines/${lineNumber}`);
+                const data = await response.json();
+                document.getElementById('display').textContent = data.text || "Line not found";
+            } catch (err) {
+                console.error("Error:", err);
+                document.getElementById('display').textContent = "Failed to fetch line.";
+            }
+        }
+    </script>
 </body>
+
 </html>
+ 
