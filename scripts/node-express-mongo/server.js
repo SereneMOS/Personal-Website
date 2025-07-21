@@ -13,6 +13,10 @@ app.use(cors({
 app.use(express.static(path.join(__dirname, '../..'))); // Serve files from root
 
 // Routes
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../travelmap.html'));
+});
+
 app.get('/api/state/:identifier', async (req, res) => {
   try {
     const identifier = req.params.identifier;
@@ -21,7 +25,7 @@ app.get('/api/state/:identifier', async (req, res) => {
     if (!isNaN(identifier)) {
       query = { id: parseInt(identifier) };
     } 
-    
+  
     else {
       query = { name: identifier };
     }
