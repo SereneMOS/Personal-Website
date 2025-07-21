@@ -16,12 +16,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/state/:id', async (req, res) => {
-  console.log('Received request for state ID:', req.params.id); // Debug 6
+  console.log('Received request for state:', req.params.id); 
   try {
     const stateId = parseInt(req.params.id);
     const state = await db.collection('states_data').findOne({ id: state });
     
-    console.log('Found in database:', state); // Debug 7
+    console.log('Found in database:', state);
     
     if (!state) {
       console.log('State not found in database');
