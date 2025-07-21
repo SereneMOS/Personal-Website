@@ -15,14 +15,21 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../../travelmap.html'));
 });
 
-// API endpoint for state data
 app.get('/api/state/:id', async (req, res) => {
+  console.log('Received request for state ID:', req.params.id); // Debug 6
   try {
-    const state = await db.collection('states_data')
-    .findOne({ id: parseInt(req.params.id) });
-    res.json(state || { error: 'State not found' });
+    const stateId = parseInt(req.params.id);
+    const state = await db.collection('states_data').findOne({ id: state });
+    
+    console.log('Found in database:', state); // Debug 7
+    
+    if (!state) {
+      console.log('State not found in database');
+      return res.status(404).json({ error: 'State not found' });
+    }
+    res.json(state);
   } catch (err) {
-    console.error(err);
+    console.error('Server error:', err);
     res.status(500).json({ error: 'Server error' });
   }
 });
@@ -35,6 +42,11 @@ MongoClient.connect(MONGODB_URI, { useUnifiedTopology: true })
   .then(client => {
     db = client.db('states');
     console.log('Connected to MongoDB');
+
+    db.collection('states_data').findOne({ id: 1 })
+      .then(testState => console.log('Test query result:', testState)) 
+      .catch(err => console.error('Test query failed:', err));
+
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
   .catch(err => console.error('MongoDB connection error:', err));
