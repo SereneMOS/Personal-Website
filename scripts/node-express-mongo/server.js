@@ -7,31 +7,33 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Middleware
-app.use(cors({
+app.use(cors({                          
   origin: ['https://people.rit.edu', 'https://your-render-app.onrender.com']
 }));
 app.use(express.static(path.join(__dirname, '../..'))); // Serve files from root
 
 // Routes
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../travelmap.html'));
-});
-
-app.get('/api/state/:id', async (req, res) => {
-  console.log('Received request for state:', req.params.id); 
+app.get('/api/state/:identifier', async (req, res) => {
   try {
-    const stateId = parseInt(req.params.id);
-    const state = await db.collection('states_data').findOne({ id: state });
+    const identifier = req.params.identifier;
+    let query;
+
+    if (!isNaN(identifier)) {
+      query = { id: parseInt(identifier) };
+    } 
     
-    console.log('Found in database:', state);
+    else {
+      query = { name: identifier };
+    }
+
+    const state = await db.collection('states_data').findOne(query);
     
     if (!state) {
-      console.log('State not found in database');
       return res.status(404).json({ error: 'State not found' });
     }
     res.json(state);
   } catch (err) {
-    console.error('Server error:', err);
+    console.error(err);
     res.status(500).json({ error: 'Server error' });
   }
 });

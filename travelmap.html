@@ -35,31 +35,31 @@
             <map name="usmap">
                 <area class="state" shape="circle" coords="152,300,20" onclick="onStateClick('Arizona')" alt="Arizona" href="#">
                 <area class="state" shape="circle" coords="425,310,10" onclick="onStateClick('Arkansas')" alt="Arkansas" href="#">
-                <area class="state" shape="circle" coords="50,225,20" onclick="select('California')" alt="California" href="#">
-                <area class="state" shape="circle" coords="252,225,20" onclick="select('Colorado')" alt="Colorado" href="#">
-                <area class="state" shape="circle" coords="600,418,10" onclick="select('Florida')" alt="Florida" href="#">
-                <area class="state" shape="circle" coords="560,325,10" onclick="select('Georgia')" alt="Georgia" href="#">
-                <area class="state" shape="circle" coords="155,135,10" onclick="select('Idaho')" alt="Idaho" href="#">
-                <area class="state" shape="circle" coords="470,220,10" onclick="select('Illinois')" alt="Illinois" href="#">
-                <area class="state" shape="circle" coords="510,210,10" onclick="select('Indiana')" alt="Indiana" href="#">
-                <area class="state" shape="circle" coords="350,240,15" onclick="select('Kansas')" alt="Kansas" href="#">
-                <area class="state" shape="circle" coords="530,254,10" onclick="select('Kentucky')" alt="Kentucky" href="#">
-                <area class="state" shape="circle" coords="637,210,5" onclick="select('Maryland')" alt="Maryland" href="#">
-                <area class="state" shape="circle" coords="680,137,5" onclick="select('Massachusets')" alt="Massachusets" href="#">
-                <area class="state" shape="circle" coords="420,250,15" onclick="select('Missouri')" alt="Missouri" href="#">
-                <area class="state" shape="circle" coords="100,200,20" onclick="select('Nevada')" alt="Nevada" href="#">
-                <area class="state" shape="circle" coords="658,190,5" onclick="select('New Jersey')" alt="New Jersey" href="#">
-                <area class="state" shape="circle" coords="230,300,20" onclick="select('New Mexico')" alt="New Mexico" href="#">
-                <area class="state" shape="circle" coords="637,137,10" onclick="select('New York')" alt="New York" href="#">
-                <area class="state" shape="circle" coords="550,200,10" onclick="select('Ohio')" alt="Ohio" href="#">
-                <area class="state" shape="circle" coords="85,50,15" onclick="select('Oregon')" alt="Oregon" href="#">
-                <area class="state" shape="circle" coords="620,175,10" onclick="select('Pennsylvania')" alt="Pennsylvania" href="#">
-                <area class="state" shape="circle" coords="620,275,10" onclick="select('South Carolina')" alt="South Carolina" href="#">
-                <area class="state" shape="circle" coords="520,285,10" onclick="select('Tennessee')" alt="Tennessee" href="#">
-                <area class="state" shape="circle" coords="337,375,20" onclick="select('Texas')" alt="Texas" href="#">
-                <area class="state" shape="circle" coords="620,235,10" onclick="select('Virginia')" alt="Virginia" href="#">
-                <area class="state" shape="circle" coords="578,230,10" onclick="select('West Virginia')" alt="West Virginia" href="#">
-                <area class="state" shape="circle" coords="230,150,20" onclick="select('Wyoming')" alt="Wyoming" href="#">
+                <area class="state" shape="circle" coords="50,225,20" onclick="onStateClick('California')" alt="California" href="#">
+                <area class="state" shape="circle" coords="252,225,20" onclick="onStateClick('Colorado')" alt="Colorado" href="#">
+                <area class="state" shape="circle" coords="600,418,10" onclick="onStateClick('Florida')" alt="Florida" href="#">
+                <area class="state" shape="circle" coords="560,325,10" onclick="onStateClick('Georgia')" alt="Georgia" href="#">
+                <area class="state" shape="circle" coords="155,135,10" onclick="onStateClick('Idaho')" alt="Idaho" href="#">
+                <area class="state" shape="circle" coords="470,220,10" onclick="onStateClick('Illinois')" alt="Illinois" href="#">
+                <area class="state" shape="circle" coords="510,210,10" onclick="onStateClick('Indiana')" alt="Indiana" href="#">
+                <area class="state" shape="circle" coords="350,240,15" onclick="onStateClick('Kansas')" alt="Kansas" href="#">
+                <area class="state" shape="circle" coords="530,254,10" onclick="onStateClick('Kentucky')" alt="Kentucky" href="#">
+                <area class="state" shape="circle" coords="637,210,5" onclick="onStateClick('Maryland')" alt="Maryland" href="#">
+                <area class="state" shape="circle" coords="680,137,5" onclick="onStateClick('Massachusets')" alt="Massachusets" href="#">
+                <area class="state" shape="circle" coords="420,250,15" onclick="onStateClick('Missouri')" alt="Missouri" href="#">
+                <area class="state" shape="circle" coords="100,200,20" onclick="onStateClick('Nevada')" alt="Nevada" href="#">
+                <area class="state" shape="circle" coords="658,190,5" onclick="onStateClick('New Jersey')" alt="New Jersey" href="#">
+                <area class="state" shape="circle" coords="230,300,20" onclick="onStateClick('New Mexico')" alt="New Mexico" href="#">
+                <area class="state" shape="circle" coords="637,137,10" onclick="onStateClick('New York')" alt="New York" href="#">
+                <area class="state" shape="circle" coords="550,200,10" onclick="onStateClick('Ohio')" alt="Ohio" href="#">
+                <area class="state" shape="circle" coords="85,50,15" onclick="onStateClick('Oregon')" alt="Oregon" href="#">
+                <area class="state" shape="circle" coords="620,175,10" onclick="onStateClick('Pennsylvania')" alt="Pennsylvania" href="#">
+                <area class="state" shape="circle" coords="620,275,10" onclick="onStateClick('South Carolina')" alt="South Carolina" href="#">
+                <area class="state" shape="circle" coords="520,285,10" onclick="onStateClick('Tennessee')" alt="Tennessee" href="#">
+                <area class="state" shape="circle" coords="337,375,20" onclick="onStateClick('Texas')" alt="Texas" href="#">
+                <area class="state" shape="circle" coords="620,235,10" onclick="onStateClick('Virginia')" alt="Virginia" href="#">
+                <area class="state" shape="circle" coords="578,230,10" onclick="onStateClick('West Virginia')" alt="West Virginia" href="#">
+                <area class="state" shape="circle" coords="230,150,20" onclick="onStateClick('Wyoming')" alt="Wyoming" href="#">
             </map>
             <div id="descriptions-div">
                 <p>hello</p>
@@ -112,7 +112,7 @@
                 }           
             }
         function onStateClick(state) {
-             console.log('State clicked:', state); // Debug 4
+             console.log('State clicked:', state); 
             fetchStateDescription(state).then(description => {
                 console.log('Updating DOM with:', description);
                 document.getElementById('descriptions-div').innerHTML = `
