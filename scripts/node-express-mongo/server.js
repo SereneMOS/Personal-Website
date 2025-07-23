@@ -8,9 +8,9 @@ const PORT = process.env.PORT || 8080;
 
 // Middleware
 app.use(cors({                          
-  origin: ['https://people.rit.edu', 'https://your-render-app.onrender.com']
+  origin: ['https://people.rit.edu', 'https://personal-website-wr0y.onrender.com']
 }));
-app.use(express.static(path.join(__dirname, '../..'))); // Serve files from root
+app.use(express.static(path.join(__dirname, '../..')));
 
 // Routes
 app.get('/', (req, res) => {
