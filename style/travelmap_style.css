@@ -77,9 +77,10 @@ a {
     margin-left: 2%;
     width: 25%;
     background-color: rgb(226, 226, 226);
-    overflow: scroll;
+    overflow-y: scroll;
     margin-bottom: 1%;
     padding: 1%;
+    height: 30%;
 }
 #right-middle-div {
     width: 15%;
