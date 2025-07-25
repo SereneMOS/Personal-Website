@@ -61,14 +61,15 @@ a {
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 70%;
     height: 100%;
-    padding-top: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding: 1%;
     z-index: 1;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     overflow: auto;
+    margin-top: 1.5%;
+    margin-bottom: 5%;
+    border-bottom: solid rgb(102, 102, 102);
 }
 #map {
     width: 70%;
@@ -76,7 +77,17 @@ a {
 #descriptions-div {
     margin-left: 2%;
     width: 25%;
-    background-color: rgb(226, 226, 226);
+    height: 440px;
+    background-color: rgb(243, 243, 243);
+    margin-bottom: 1%;
+    padding: 1%;
+    border-left: solid rgb(102, 102, 102);
+    border-radius: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #right-middle-div {
     width: 15%;
