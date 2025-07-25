@@ -87,6 +87,7 @@ a {
     flex-wrap: wrap;
     flex-direction: row;
     overflow: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #right-middle-div {
     width: 15%;
