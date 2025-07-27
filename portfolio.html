@@ -107,10 +107,16 @@
                 <img src="assets/porfolio/savita.png" alt="savita" style="width: 30%; margin-bottom: 3%; margin-right: 3%;">
             </div>
             <div class="content" id="content7">
-                <div style="align-items: center; margin-right: 3%; margin-left: 3%;">
+                <div style="align-items: center; margin-right: 3%; margin-left: 3%; width: 240%;">
                     <div style="font-size: 30px; border-bottom: solid; background-color: rgb(234, 187, 203); padding: 1.5%; padding-bottom: 0%; margin-bottom: 1%;">This Website!</div>
+                    <div id="text-content">
                     Wow! What do you know? This website is also a showcase of my prowess, so if you're
                     curious about what I can do, then stop reading and start poking around.
+                    </div>
+                </div>
+                <div style="display: flex;">
+                    <button id="prev-button" onclick="updateText(this)"><img src="assets/porfolio/leftarrow.png" width="50%"></button>
+                    <button id="next-button" onclick="updateText(this)"><img src="assets/porfolio/rightarrow.png" width="50%"></button>
                 </div>
                 <img src="assets/porfolio/rosegarden1.PNG" alt="rosegarden1" style="width: 35%; margin-bottom: 3%; margin-right: 3%;">
             </div>
@@ -145,6 +151,35 @@
             </a>
         </div>
     </div>
+    <script>
+        const textContents = [
+            "Wow! What do you know? This website is also a showcase of my skills, so if you're curious about what I can do, then read this or start poking around.",
+            "I first made this website in June '24 as a place to store my writings and other cute projects, as well as have a public portfolio, and in that time I got to practice a lot of HTML and CSS as I built the first 'version' of the site.",
+            "The first big thing after that was building the layout for writing content in the, well, Writings page; setting out the posts was easy enough, but there was some wrangling with JS to get the dynamic scaling to work.",
+            "After that, I decided to go ahead and host the website, using RIT's complimentary hosting service to make the page public.",
+            "My next big swing was to try and integrate an instance of a modified chess game into the Chess 2 page of the site, but that proved to be a way more complicated task than I thought.",
+            "The chess game was made in Java, which does not mesh well with JavaScript, go figure. After trying to use JFX my beloved on the page directly and hosting the instance of the game remotely and connect the user to it, I realized I would just need to build a kind of JS API or middleware, and so shelved the idea for when I had have that in me to do.",
+            "Recently I added the Travel Map page, the logic for which wasn't too complicated, but I wanted to keep the descriptions in a database seperated from the rest of the tech stack, so I learned how to use node.JS, Render, and MongoDB to do just that.",
+            "Now the latest thing I've done is spruce up the look and feel of the site and adding a few odds and ends like this. The next thing I want to do? Cookie integration."
+        ];
+
+        let currentIndex = 0;
+        const textElement = document.getElementById("text-content");
+        const prevBtn = document.getElementById("prev-button");
+        const nextBtn = document.getElementById("next-button");
+
+        function updateText(element) {
+            if (element.id == "next-button" && currentIndex != (textContents.length - 1)) {
+                currentIndex++;
+                textElement.textContent = textContents[currentIndex];
+            }
+            if (element.id == "prev-button" && currentIndex != 0) {
+                currentIndex--;
+                textElement.textContent = textContents[currentIndex];
+            }
+        }
+    </script>
 </body>
+
 
 </html>
