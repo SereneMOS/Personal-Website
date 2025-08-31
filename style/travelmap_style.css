@@ -67,8 +67,7 @@ a {
     flex-wrap: wrap;
     flex-direction: row;
     overflow: auto;
-    margin-top: 1.5%;
-    margin-bottom: 5%;
+    margin-bottom: 15%;
     border-bottom: solid rgb(102, 102, 102);
     margin-left: 15%;
 }
